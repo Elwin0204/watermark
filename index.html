@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>watermark</title>
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: #b7eb8f;
+      position: absolute;
+      top: 300px;
+      left: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: #fffb8f;
+      position: absolute;
+      right: 200px;
+      bottom: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1" onclick="alert(1);">box1</div>
+  <div class="box2" onclick="alert(2);">box2</div>
+  <a href="https://www.baidu.com"> 
+    <h1>baidu</h1>
+  </a>
+  <script type="text/javascript" src="watermark.js"></script>
+  <script type="text/javascript">
+    watermark.load({
+      watermark_txt: "BILIBIL干杯🍻",
+      watermark_x: 20, //水印起始位置x轴坐标
+      watermark_y: 20, //水印起始位置Y轴坐标
+      watermark_rows: 0, //水印行数
+      watermark_cols: 0, //水印列数
+      watermark_x_space: 30, //水印x轴间隔
+      watermark_y_space: 30, //水印y轴间隔
+      watermark_color: '#000000', //水印字体颜色
+      watermark_alpha: 0.5, //水印透明度，要求设置在大于等于0.005
+      watermark_fontsize: '18px', //水印字体大小
+      watermark_font: '微软雅黑', //水印字体
+      watermark_width: 150, //水印宽度
+      watermark_height: 100, //水印长度
+      watermark_angle: 15, //水印倾斜度数
+      watermark_bg_alpha: 0.1 //加透明度导致隐形水印无法读取
+    });
+  </script>
+</body>
+</html>
